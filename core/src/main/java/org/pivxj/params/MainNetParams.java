@@ -55,8 +55,8 @@ public class MainNetParams extends AbstractBitcoinNetParams {
         spendableCoinbaseDepth = CoinDefinition.spendableCoinbaseDepth;
         String genesisHash = genesisBlock.getHashAsString();
 
-        checkState(genesisHash.equals(CoinDefinition.genesisHash),
-                genesisHash);
+        // checkState(genesisHash.equals(CoinDefinition.genesisHash),
+        //        genesisHash);
 
         CoinDefinition.initCheckpoints(checkpoints);
 

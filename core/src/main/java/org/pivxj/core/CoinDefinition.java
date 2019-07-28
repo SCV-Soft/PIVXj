@@ -80,7 +80,7 @@ public class CoinDefinition {
     public static final int PROTOCOL_VERSION = 70916;          //version.h PROTOCOL_VERSION
     public static final int MIN_PROTOCOL_VERSION = 70916;        //version.h MIN_PROTO_VERSION
 
-    public static final int BLOCK_CURRENTVERSION =12;   //CBlock::CURRENT_VERSION
+    public static final int BLOCK_CURRENTVERSION = 1;   //CBlock::CURRENT_VERSION
     public static final int MAX_BLOCK_SIZE = 1 * 1000 * 1000;
 
 
@@ -119,8 +119,8 @@ public class CoinDefinition {
     static public String genesisMerkleRoot = "6f2365be9a7637754a1d34032be19778b47c1dffb5a5fe4b382057fe69f4fb95";
     static public int genesisBlockValue = 250;                                                              //main.cpp: LoadBlockIndex
     //taken from the raw data of the block explorer
-    static public String genesisTxInBytes = "";//"04ffff001d01044c5957697265642030392f4a616e2f3230313420546865204772616e64204578706572696d656e7420476f6573204c6976653a204f76657273746f636b2e636f6d204973204e6f7720416363657074696e6720426974636f696e73";   //"limecoin se convertira en una de las monedas mas segura del mercado, checa nuestros avances"
-    static public String genesisTxOutBytes = "";//"040184710fa689ad5023690c80f3a49c8f13f8d45b8c857fbcbc8bc4a8e4d3eb4b10f4d4604fa08dce601aaf0f470216fe1b51850b4acf21b179c45070ac7b03a9";
+    static public String genesisTxInBytes = "04ffff001d01044c55552e532e204e657773202620576f726c64205265706f7274204a616e203238203230313620576974682048697320416273656e63652c205472756d7020446f6d696e6174657320416e6f7468657220446562617465";//"04ffff001d01044c5957697265642030392f4a616e2f3230313420546865204772616e64204578706572696d656e7420476f6573204c6976653a204f76657273746f636b2e636f6d204973204e6f7720416363657074696e6720426974636f696e73";   //"limecoin se convertira en una de las monedas mas segura del mercado, checa nuestros avances"
+    static public String genesisTxOutBytes = "abaab9327e5b33f265c3aaeb3537b8a989cc09c1692ef106bbfa38f285e15c34";//"040184710fa689ad5023690c80f3a49c8f13f8d45b8c857fbcbc8bc4a8e4d3eb4b10f4d4604fa08dce601aaf0f470216fe1b51850b4acf21b179c45070ac7b03a9";
 
     //net.cpp strDNSSeed
     static public String[] dnsSeeds = new String[] {
@@ -132,7 +132,7 @@ public class CoinDefinition {
             "seed5.popchain.co"
     };
 
-    public static int minBroadcastConnections = 3;   //0 for default; we need more peers.
+    public static int minBroadcastConnections = 0;   //0 for default; we need more peers.
 
     //
     // TestNet - PIVX
@@ -179,7 +179,7 @@ public class CoinDefinition {
     /** The string returned by getId() for the main, production network where people trade things. */
     public static final String ID_MAINNET = "org.pivx.production"; // TODO : Change it
     /** The string returned by getId() for the testnet. */
-    public static final String ID_TESTNET = "co.popchain.testnet";
+    public static final String ID_TESTNET = "org.pivx.test";
     /** Unit test network. */
     public static final String ID_UNITTESTNET = "com.google.popchain.unittest";
 
