@@ -132,7 +132,7 @@ public class CheckpointManager {
             int numCheckpoints = dis.readInt();
             checkState(numCheckpoints > 0);
             final int size = StoredBlock.COMPACT_SERIALIZED_SIZE_ZEROCOIN;
-            ByteBuffer buffer = ByteBuffer.allocate(size);
+            ByteBuffer buffer = ByteBuffer.allocate(size); /*
             for (int i = 0; i < numCheckpoints; i++) {
                 if (dis.read(buffer.array(), 0, size) < size)
                     throw new IOException("Incomplete read whilst loading checkpoints.");
@@ -140,6 +140,7 @@ public class CheckpointManager {
                 buffer.position(0);
                 checkpoints.put(block.getHeader().getTimeSeconds(), block);
             }
+            */
             Sha256Hash dataHash = Sha256Hash.wrap(digest.digest());
             log.info("Read {} checkpoints, hash is {}", checkpoints.size(), dataHash);
             return dataHash;
